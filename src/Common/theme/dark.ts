@@ -1,10 +1,16 @@
 import { createTheme } from '@mui/material';
-import commonTheme from './common';
+import { deepmerge } from '@mui/utils';
+import commonThemeOptions from './common';
 
-const darkTheme = createTheme(commonTheme, {
-  palette: {
-    mode: 'dark',
-  },
-});
+/**
+ * Dark theme.
+ */
+const darkTheme = createTheme(
+  deepmerge(commonThemeOptions, {
+    palette: {
+      mode: 'dark',
+    },
+  }),
+);
 
 export default darkTheme;

@@ -1,7 +1,10 @@
-import { createTheme } from '@mui/material';
+import { ThemeOptions } from '@mui/material';
 
-const commonTheme = createTheme({
+/**
+ * Common properties for both light & dark themes.
+ */
+const commonThemeOptions: ThemeOptions = {
   spacing: (factor: number) => `${1 * factor}rem`, // 1 MUI unit = 1rem
-});
+};
 
-export default commonTheme;
+export default commonThemeOptions;

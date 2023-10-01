@@ -1,10 +1,16 @@
 import { createTheme } from '@mui/material';
-import commonTheme from './common';
+import { deepmerge } from '@mui/utils';
+import commonThemeOptions from './common';
 
-const lightTheme = createTheme(commonTheme, {
-  palette: {
-    mode: 'light',
-  },
-});
+/**
+ * Light theme.
+ */
+const lightTheme = createTheme(
+  deepmerge(commonThemeOptions, {
+    palette: {
+      mode: 'light',
+    },
+  }),
+);
 
 export default lightTheme;
