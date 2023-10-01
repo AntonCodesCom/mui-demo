@@ -1,10 +1,15 @@
 import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-export default function CommonNavbar() {
+interface Props {
+  onModeChange?: () => void;
+}
+
+export default function CommonNavbar({ onModeChange = () => {} }: Props) {
   return (
-    <AppBar position="sticky" elevation={0} color="default">
+    <AppBar position="sticky" elevation={0} color="default" enableColorOnDark>
       <Toolbar>
         <IconButton
           size="large"
@@ -20,6 +25,9 @@ export default function CommonNavbar() {
         </Typography>
         <IconButton size="large" color="inherit">
           <AccountCircle />
+        </IconButton>
+        <IconButton size="large" color="inherit" onClick={onModeChange}>
+          <DarkModeIcon />
         </IconButton>
       </Toolbar>
     </AppBar>

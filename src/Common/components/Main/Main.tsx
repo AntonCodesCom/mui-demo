@@ -1,3 +1,9 @@
+import { Box, Typography } from '@mui/material';
+
 export default function CommonMain() {
-  return <div>common main</div>;
+  return (
+    <Box>
+      <Typography>common main</Typography>
+    </Box>
+  );
 }
