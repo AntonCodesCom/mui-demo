@@ -1,8 +1,6 @@
 import {
   Box,
-  Button,
   Checkbox,
-  Stack,
   Table,
   TableBody,
   TableCell,
@@ -11,28 +9,17 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
+import PaymentHeader from '../Header';
 
 export default function PaymentMain() {
   return (
     <>
-      <Stack direction="row">
-        <Typography variant="h5" component="h1">
-          Payments overview
-        </Typography>
-        <Box flex={1} />
-        <Button variant="outlined" color="inherit">
-          Export
-        </Button>
-        <Box mr={1.5} />
-        <Button variant="contained" color="primary">
-          Payment link
-        </Button>
-      </Stack>
+      <PaymentHeader />
       <Box mb={2} />
       <TableContainer>
         <Table>
           <TableHead>
-            <TableRow>
+            <TableRow sx={{ whiteSpace: 'nowrap' }}>
               <TableCell>
                 <Checkbox />
               </TableCell>
@@ -54,8 +41,10 @@ export default function PaymentMain() {
                   Succeeded
                 </Typography>
               </TableCell>
-              <TableCell>$19,623.00 USD</TableCell>
-              <TableCell>•••• 4242</TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>
+                $19,623.00 USD
+              </TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
               <TableCell>Oct 2, 2023, 14:30:59</TableCell>
             </TableRow>
             <TableRow>
@@ -68,8 +57,10 @@ export default function PaymentMain() {
                   Succeeded
                 </Typography>
               </TableCell>
-              <TableCell>$19,623.00 USD</TableCell>
-              <TableCell>•••• 4242</TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>
+                $19,623.00 USD
+              </TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
               <TableCell>Oct 2, 2023, 14:30:59</TableCell>
             </TableRow>
             <TableRow>
@@ -82,8 +73,10 @@ export default function PaymentMain() {
                   Succeeded
                 </Typography>
               </TableCell>
-              <TableCell>$19,623.00 USD</TableCell>
-              <TableCell>•••• 4242</TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>
+                $19,623.00 USD
+              </TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
               <TableCell>Oct 2, 2023, 14:30:59</TableCell>
             </TableRow>
           </TableBody>
