@@ -1,4 +1,19 @@
-import { Drawer } from '@mui/material';
+import {
+  AnalyticsOutlined,
+  CodeOutlined,
+  HomeOutlined,
+  IntegrationInstructionsOutlined,
+  PaymentOutlined,
+  PhishingOutlined,
+} from '@mui/icons-material';
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
 
 interface Props {
   open?: boolean;
@@ -11,7 +26,56 @@ export default function CommonSidebar({
 }: Props) {
   return (
     <Drawer anchor="left" open={open} onClose={onClose}>
-      <div>sidebar</div>
+      <List>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <HomeOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <AnalyticsOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Analytics" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <PaymentOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Payments" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <IntegrationInstructionsOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Integrations" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <PhishingOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Fraud solution" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <CodeOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Developers" />
+          </ListItemButton>
+        </ListItem>
+      </List>
     </Drawer>
   );
 }
