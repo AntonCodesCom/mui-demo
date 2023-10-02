@@ -4,19 +4,24 @@ import {
   HomeOutlined,
   IntegrationInstructionsOutlined,
   LogoutOutlined,
+  MenuOpen,
   PaymentOutlined,
   PhishingOutlined,
   TerminalOutlined,
 } from '@mui/icons-material';
 import {
+  Box,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
   ListSubheader,
+  Toolbar,
 } from '@mui/material';
+import CommonLogo from '../Logo';
 
 interface Props {
   open?: boolean;
@@ -29,6 +34,15 @@ export default function CommonSidebar({
 }: Props) {
   return (
     <Drawer anchor="left" open={open} onClose={onClose}>
+      <Toolbar disableGutters>
+        <Box mr={1} />
+        <CommonLogo />
+        <Box flex="1" />
+        <IconButton size="large" color="inherit" onClick={onClose}>
+          <MenuOpen />
+        </IconButton>
+        <Box mr={0.5} />
+      </Toolbar>
       <List>
         <ListItem disablePadding>
           <ListItemButton>

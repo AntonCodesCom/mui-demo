@@ -1,14 +1,7 @@
-import {
-  AppBar,
-  Box,
-  IconButton,
-  Stack,
-  Toolbar,
-  Typography,
-} from '@mui/material';
+import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
-import logo from './logo.svg';
+import CommonLogo from '../Logo';
 
 interface Props {
   onSidebarOpen?: () => void;
@@ -26,13 +19,7 @@ export default function CommonNavbar({
           <MenuIcon />
         </IconButton>
         <Box flex={1} />
-        <Stack direction="row">
-          <img alt="logo" src={logo} />
-          <Box mr={0.5} />
-          <Typography variant="h6" component="div">
-            PayUI
-          </Typography>
-        </Stack>
+        <CommonLogo />
         <Box flex={1} />
         <IconButton size="large" color="inherit" onClick={onThemeModeChange}>
           <DarkModeIcon />
