@@ -6,23 +6,31 @@ import darkTheme from 'Common/theme/dark';
 import lightTheme from 'Common/theme/light';
 import { useState } from 'react';
 
-enum Theme {
+enum ThemeMode {
   DARK,
   LIGHT,
 }
 
 export default function App() {
-  const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [themeMode, setThemeMode] = useState<ThemeMode>(ThemeMode.LIGHT);
 
-  function handleModeChange() {
-    setTheme((theme) => (theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
+  function handleThemeModeChange() {
+    setThemeMode((mode) =>
+      mode === ThemeMode.LIGHT ? ThemeMode.DARK : ThemeMode.LIGHT,
+    );
   }
 
   return (
-    <ThemeProvider theme={theme === Theme.DARK ? darkTheme : lightTheme}>
+    <ThemeProvider
+      theme={themeMode === ThemeMode.DARK ? darkTheme : lightTheme}
+    >
       <CssBaseline />
-      <CommonNavbar onModeChange={handleModeChange} />
-      <CommonSidebar />
+      <CommonNavbar
+        onSidebarOpen={() => setSidebarOpen(true)}
+        onThemeModeChange={handleThemeModeChange}
+      />
+      <CommonSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <CommonMain />
     </ThemeProvider>
   );

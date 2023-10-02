@@ -11,14 +11,18 @@ import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 import logo from './logo.svg';
 
 interface Props {
-  onModeChange?: () => void;
+  onSidebarOpen?: () => void;
+  onThemeModeChange?: () => void;
 }
 
-export default function CommonNavbar({ onModeChange = () => {} }: Props) {
+export default function CommonNavbar({
+  onSidebarOpen = () => {},
+  onThemeModeChange = () => {},
+}: Props) {
   return (
     <AppBar position="sticky" elevation={0} color="default" enableColorOnDark>
       <Toolbar disableGutters>
-        <IconButton size="large" color="inherit">
+        <IconButton size="large" color="inherit" onClick={onSidebarOpen}>
           <MenuIcon />
         </IconButton>
         <Box flex={1} />
@@ -30,7 +34,7 @@ export default function CommonNavbar({ onModeChange = () => {} }: Props) {
           </Typography>
         </Stack>
         <Box flex={1} />
-        <IconButton size="large" color="inherit" onClick={onModeChange}>
+        <IconButton size="large" color="inherit" onClick={onThemeModeChange}>
           <DarkModeIcon />
         </IconButton>
       </Toolbar>
