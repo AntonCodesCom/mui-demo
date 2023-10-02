@@ -49,7 +49,11 @@ export default function PaymentMain() {
                 <Checkbox />
               </TableCell>
               <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
-              <TableCell>Succeeded</TableCell>
+              <TableCell>
+                <Typography variant="body2" sx={{ color: 'success.main' }}>
+                  Succeeded
+                </Typography>
+              </TableCell>
               <TableCell>$19,623.00 USD</TableCell>
               <TableCell>•••• 4242</TableCell>
               <TableCell>Oct 2, 2023, 14:30:59</TableCell>
@@ -59,7 +63,11 @@ export default function PaymentMain() {
                 <Checkbox />
               </TableCell>
               <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
-              <TableCell>Succeeded</TableCell>
+              <TableCell>
+                <Typography variant="body2" sx={{ color: 'success.main' }}>
+                  Succeeded
+                </Typography>
+              </TableCell>
               <TableCell>$19,623.00 USD</TableCell>
               <TableCell>•••• 4242</TableCell>
               <TableCell>Oct 2, 2023, 14:30:59</TableCell>
@@ -69,7 +77,11 @@ export default function PaymentMain() {
                 <Checkbox />
               </TableCell>
               <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
-              <TableCell>Succeeded</TableCell>
+              <TableCell>
+                <Typography variant="body2" sx={{ color: 'success.main' }}>
+                  Succeeded
+                </Typography>
+              </TableCell>
               <TableCell>$19,623.00 USD</TableCell>
               <TableCell>•••• 4242</TableCell>
               <TableCell>Oct 2, 2023, 14:30:59</TableCell>
