@@ -3,8 +3,10 @@ import {
   CodeOutlined,
   HomeOutlined,
   IntegrationInstructionsOutlined,
+  LogoutOutlined,
   PaymentOutlined,
   PhishingOutlined,
+  TerminalOutlined,
 } from '@mui/icons-material';
 import {
   Drawer,
@@ -13,6 +15,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  ListSubheader,
 } from '@mui/material';
 
 interface Props {
@@ -73,6 +76,24 @@ export default function CommonSidebar({
               <CodeOutlined />
             </ListItemIcon>
             <ListItemText primary="Developers" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+      <List subheader={<ListSubheader>Support</ListSubheader>}>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <TerminalOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Documentation" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <LogoutOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Log out" />
           </ListItemButton>
         </ListItem>
       </List>
