@@ -1,6 +1,7 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import CommonMain from 'Common/components/Main';
 import CommonNavbar from 'Common/components/Navbar';
+import CommonSidebar from 'Common/components/Sidebar';
 import darkTheme from 'Common/theme/dark';
 import lightTheme from 'Common/theme/light';
 import { useState } from 'react';
@@ -21,6 +22,7 @@ export default function App() {
     <ThemeProvider theme={theme === Theme.DARK ? darkTheme : lightTheme}>
       <CssBaseline />
       <CommonNavbar onModeChange={handleModeChange} />
+      <CommonSidebar />
       <CommonMain />
     </ThemeProvider>
   );
