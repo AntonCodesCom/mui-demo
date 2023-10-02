@@ -1,87 +1,13 @@
-import {
-  Box,
-  Checkbox,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from '@mui/material';
+import { Box } from '@mui/material';
 import PaymentHeader from '../Header';
+import PaymentTable from '../Table';
 
 export default function PaymentMain() {
   return (
     <>
       <PaymentHeader />
       <Box mb={2} />
-      <TableContainer>
-        <Table>
-          <TableHead>
-            <TableRow sx={{ whiteSpace: 'nowrap' }}>
-              <TableCell>
-                <Checkbox />
-              </TableCell>
-              <TableCell>Payment ID</TableCell>
-              <TableCell>Status</TableCell>
-              <TableCell>Amount</TableCell>
-              <TableCell>P. Method</TableCell>
-              <TableCell>Creation date</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>
-                <Checkbox />
-              </TableCell>
-              <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
-              <TableCell>
-                <Typography variant="body2" sx={{ color: 'success.main' }}>
-                  Succeeded
-                </Typography>
-              </TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>
-                $19,623.00 USD
-              </TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
-              <TableCell>Oct 2, 2023, 14:30:59</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <Checkbox />
-              </TableCell>
-              <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
-              <TableCell>
-                <Typography variant="body2" sx={{ color: 'success.main' }}>
-                  Succeeded
-                </Typography>
-              </TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>
-                $19,623.00 USD
-              </TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
-              <TableCell>Oct 2, 2023, 14:30:59</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <Checkbox />
-              </TableCell>
-              <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
-              <TableCell>
-                <Typography variant="body2" sx={{ color: 'success.main' }}>
-                  Succeeded
-                </Typography>
-              </TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>
-                $19,623.00 USD
-              </TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
-              <TableCell>Oct 2, 2023, 14:30:59</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <PaymentTable />
     </>
   );
 }
