@@ -1,4 +1,18 @@
-import { Drawer } from '@mui/material';
+import {
+  ArrowBack,
+  NotificationsOutlined,
+  SettingsOutlined,
+} from '@mui/icons-material';
+import {
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Toolbar,
+} from '@mui/material';
 
 interface Props {
   open?: boolean;
@@ -11,7 +25,29 @@ export default function CommonRightMenu({
 }: Props) {
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
-      Right Menu
+      <Toolbar>
+        <IconButton onClick={onClose}>
+          <ArrowBack />
+        </IconButton>
+      </Toolbar>
+      <List>
+        <ListItem>
+          <ListItemButton>
+            <ListItemIcon>
+              <NotificationsOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Notifications" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton>
+            <ListItemIcon>
+              <SettingsOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Settings" />
+          </ListItemButton>
+        </ListItem>
+      </List>
     </Drawer>
   );
 }
