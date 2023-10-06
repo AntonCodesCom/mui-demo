@@ -13,6 +13,14 @@ const commonThemeOptions: ThemeOptions = {
         },
       },
     },
+    MuiToolbar: {
+      styleOverrides: {
+        gutters: {
+          paddingLeft: '1rem !important',
+          paddingRight: '1rem !important',
+        },
+      },
+    },
   },
 };
 

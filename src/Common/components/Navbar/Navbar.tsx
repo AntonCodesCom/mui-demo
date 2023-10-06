@@ -1,7 +1,8 @@
-import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
+import { AppBar, Avatar, Box, IconButton, Toolbar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 import CommonLogo from '../Logo';
+import avatar from './avatar.jpg';
 
 interface Props {
   onSidebarOpen?: () => void;
@@ -14,7 +15,7 @@ export default function CommonNavbar({
 }: Props) {
   return (
     <AppBar position="sticky" elevation={0} color="default" enableColorOnDark>
-      <Toolbar disableGutters>
+      <Toolbar>
         <IconButton size="large" color="inherit" onClick={onSidebarOpen}>
           <MenuIcon />
         </IconButton>
@@ -24,6 +25,7 @@ export default function CommonNavbar({
         <IconButton size="large" color="inherit" onClick={onThemeModeChange}>
           <DarkModeIcon />
         </IconButton>
+        <Avatar alt="AntonCodes" src={avatar} />
       </Toolbar>
     </AppBar>
   );
