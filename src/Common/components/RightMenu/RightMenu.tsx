@@ -1,9 +1,13 @@
 import {
   ArrowBack,
+  DarkModeOutlined,
   NotificationsOutlined,
   SettingsOutlined,
 } from '@mui/icons-material';
 import {
+  Avatar,
+  Box,
+  Divider,
   Drawer,
   IconButton,
   List,
@@ -11,7 +15,9 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Stack,
   Toolbar,
+  Typography,
 } from '@mui/material';
 
 interface Props {
@@ -30,7 +36,12 @@ export default function CommonRightMenu({
           <ArrowBack />
         </IconButton>
       </Toolbar>
-      <List>
+      <Stack direction="row" alignItems="center" gap={1} p={1}>
+        <Avatar alt="AntonCodes" />
+        <Typography>AntonCodes</Typography>
+      </Stack>
+      <Divider />
+      <Box component={List} px={0.5}>
         <ListItem>
           <ListItemButton>
             <ListItemIcon>
@@ -47,7 +58,18 @@ export default function CommonRightMenu({
             <ListItemText primary="Settings" />
           </ListItemButton>
         </ListItem>
-      </List>
+      </Box>
+      <Divider />
+      <Box component={List} px={0.5}>
+        <ListItem>
+          <ListItemButton>
+            <ListItemIcon>
+              <DarkModeOutlined />
+            </ListItemIcon>
+            <ListItemText primary="Dark mode" />
+          </ListItemButton>
+        </ListItem>
+      </Box>
     </Drawer>
   );
 }

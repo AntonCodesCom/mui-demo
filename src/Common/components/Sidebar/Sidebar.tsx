@@ -45,7 +45,7 @@ export default function CommonSidebar({
       </Toolbar>
       <Box px={1}>
         <List>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <HomeOutlined />
@@ -53,7 +53,7 @@ export default function CommonSidebar({
               <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <AnalyticsOutlined />
@@ -61,7 +61,7 @@ export default function CommonSidebar({
               <ListItemText primary="Analytics" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <PaymentOutlined />
@@ -69,7 +69,7 @@ export default function CommonSidebar({
               <ListItemText primary="Payments" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <IntegrationInstructionsOutlined />
@@ -77,7 +77,7 @@ export default function CommonSidebar({
               <ListItemText primary="Integrations" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <PhishingOutlined />
@@ -85,7 +85,7 @@ export default function CommonSidebar({
               <ListItemText primary="Fraud solution" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <CodeOutlined />
@@ -95,7 +95,7 @@ export default function CommonSidebar({
           </ListItem>
         </List>
         <List subheader={<ListSubheader>Support</ListSubheader>}>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <TerminalOutlined />
@@ -103,7 +103,7 @@ export default function CommonSidebar({
               <ListItemText primary="Documentation" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <LogoutOutlined />
