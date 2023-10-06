@@ -16,11 +16,13 @@ import { ExpandMore } from '@mui/icons-material';
 
 interface Props {
   onSidebarOpen?: () => void;
+  onRightMenuOpen?: () => void;
   onThemeModeChange?: () => void;
 }
 
 export default function CommonNavbar({
   onSidebarOpen = () => {},
+  onRightMenuOpen = () => {},
   onThemeModeChange = () => {},
 }: Props) {
   return (
@@ -49,6 +51,7 @@ export default function CommonNavbar({
           px={0.5}
           py={0.25}
           borderRadius="4px"
+          onClick={onRightMenuOpen}
         >
           <Avatar alt="AntonCodes" src={avatar} />
           <Box mr={0.25} />
