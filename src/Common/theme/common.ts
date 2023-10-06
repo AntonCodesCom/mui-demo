@@ -16,8 +16,8 @@ const commonThemeOptions: ThemeOptions = {
     MuiToolbar: {
       styleOverrides: {
         gutters: {
-          paddingLeft: '1rem !important',
-          paddingRight: '1rem !important',
+          paddingLeft: '1rem !important', // overriding .MuiToolbar-root
+          paddingRight: '1rem !important', // overriding .MuiToolbar-root
         },
       },
     },
