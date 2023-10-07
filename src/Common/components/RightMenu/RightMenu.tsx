@@ -22,6 +22,7 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
+import CommonTestMode from '../TestMode';
 
 interface Props {
   open?: boolean;
@@ -139,6 +140,8 @@ export default function CommonRightMenu({
             <ExpandMore />
           </Stack>
         </ButtonBase>
+        <Box mb={1.5} />
+        <CommonTestMode />
       </Box>
     </Drawer>
   );
