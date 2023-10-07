@@ -1,4 +1,4 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, Paper, Stack, ThemeProvider } from '@mui/material';
 import CommonMain from 'Common/components/Main';
 import CommonNavbar from 'Common/components/Navbar';
 import CommonRightMenu from 'Common/components/RightMenu';
@@ -28,13 +28,17 @@ export default function App() {
       theme={themeMode === ThemeMode.DARK ? darkTheme : lightTheme}
     >
       <CssBaseline />
-      <CommonNavbar
-        onSidebarOpen={() => setSidebarOpen(true)}
-        onRightMenuOpen={() => setRightMenuOpen(true)}
-        onThemeModeChange={handleThemeModeChange}
-      />
+      <Stack minHeight="100vh">
+        <CommonNavbar
+          onSidebarOpen={() => setSidebarOpen(true)}
+          onRightMenuOpen={() => setRightMenuOpen(true)}
+          onThemeModeChange={handleThemeModeChange}
+        />
+        <Box component={Paper} flex={1} py={2} px={{ xs: 1, sm: 2 }}>
+          <CommonMain />
+        </Box>
+      </Stack>
       <CommonSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <CommonMain />
       <CommonRightMenu
         open={rightMenuOpen}
         onClose={() => setRightMenuOpen(false)}

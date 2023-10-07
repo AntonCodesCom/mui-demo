@@ -18,6 +18,11 @@ const commonThemeOptions: ThemeOptions = {
         },
       },
     },
+    MuiPaper: {
+      defaultProps: {
+        elevation: 0,
+      },
+    },
     MuiToolbar: {
       styleOverrides: {
         gutters: {
