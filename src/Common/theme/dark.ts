@@ -5,9 +5,6 @@ import commonThemeOptions from './common';
 const darkThemeOptions: ThemeOptions = {
   palette: {
     mode: 'dark',
-    background: {
-      default: 'black',
-    },
     primary: {
       main: '#6c69ff',
     },

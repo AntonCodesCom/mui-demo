@@ -16,6 +16,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [rightMenuOpen, setRightMenuOpen] = useState(false);
   const [themeMode, setThemeMode] = useState<ThemeMode>(ThemeMode.LIGHT);
+  const mainBgColor = themeMode === ThemeMode.LIGHT ? '#fbfbfb' : '#121212';
 
   function handleThemeModeChange() {
     setThemeMode((mode) =>
@@ -34,7 +35,16 @@ export default function App() {
           onRightMenuOpen={() => setRightMenuOpen(true)}
           onThemeModeChange={handleThemeModeChange}
         />
-        <Box component={Paper} flex={1} py={2} px={{ xs: 1, sm: 2 }}>
+        <Box
+          component="main"
+          flex={1}
+          mx={{ xs: 0, md: 1 }}
+          mb={{ xs: 0, md: 1 }}
+          py={2}
+          px={{ xs: 1, md: 2 }}
+          borderRadius="16px"
+          bgcolor={mainBgColor}
+        >
           <CommonMain />
         </Box>
       </Stack>
