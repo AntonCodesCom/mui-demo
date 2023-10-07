@@ -9,6 +9,9 @@ const lightThemeOptions: ThemeOptions = {
       default: 'white',
       paper: '#fbfbfb',
     },
+    primary: {
+      main: '#4a46ff',
+    },
   },
   components: {
     MuiAppBar: {

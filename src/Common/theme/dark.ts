@@ -8,6 +8,9 @@ const darkThemeOptions: ThemeOptions = {
     background: {
       default: 'black',
     },
+    primary: {
+      main: '#6c69ff',
+    },
   },
   components: {
     MuiAppBar: {

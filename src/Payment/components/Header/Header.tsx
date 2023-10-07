@@ -13,7 +13,7 @@ export default function PaymentHeader() {
           <CloudUploadOutlined />
         </IconButton>
         <Box mr={0.5} />
-        <Fab size="small" color="primary">
+        <Fab size="small" color="primary" sx={{ boxShadow: 'none' }}>
           <Add />
         </Fab>
       </Box>
@@ -26,7 +26,12 @@ export default function PaymentHeader() {
           Export
         </Button>
         <Box mr={0.5} />
-        <Button variant="contained" color="primary" startIcon={<Add />}>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<Add />}
+          disableElevation
+        >
           Payment link
         </Button>
       </Box>
