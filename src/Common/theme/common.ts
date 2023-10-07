@@ -6,6 +6,13 @@ import { ThemeOptions } from '@mui/material';
 const commonThemeOptions: ThemeOptions = {
   spacing: (factor: number) => `${1 * factor}rem`, // 1 MUI unit = 1rem
   components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+        },
+      },
+    },
     MuiListItem: {
       defaultProps: {
         disablePadding: true,

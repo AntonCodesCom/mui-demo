@@ -22,6 +22,10 @@ export default function PaymentHeader() {
           variant="outlined"
           color="inherit"
           startIcon={<CloudUploadOutlined />}
+          sx={{
+            borderColor: '#F0F2F4',
+            backgroundColor: 'white',
+          }}
         >
           Export
         </Button>
