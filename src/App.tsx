@@ -1,4 +1,4 @@
-import { Box, CssBaseline, Paper, Stack, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, Stack, ThemeProvider } from '@mui/material';
 import CommonMain from 'Common/components/Main';
 import CommonNavbar from 'Common/components/Navbar';
 import CommonRightMenu from 'Common/components/RightMenu';
