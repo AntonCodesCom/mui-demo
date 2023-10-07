@@ -1,12 +1,44 @@
-import { BugReport, ExpandMore } from '@mui/icons-material';
-import { Box, ButtonBase, Stack, Typography } from '@mui/material';
+import {
+  BugReport,
+  ExpandMore,
+  WarningAmberOutlined,
+} from '@mui/icons-material';
+import {
+  Box,
+  ButtonBase,
+  ListItemText,
+  Menu,
+  MenuItem,
+  Stack,
+  Typography,
+} from '@mui/material';
 import { useState } from 'react';
 
 export default function CommonTestMode() {
-  const [on] = useState(false);
+  const [on, setOn] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  function handleTurnOn() {
+    setOn(true);
+    setAnchorEl(null);
+  }
+  function handleTurnOff() {
+    setOn(false);
+    setAnchorEl(null);
+  }
+
   return (
     <>
       <ButtonBase
+        onClick={handleClick}
         sx={{
           position: 'relative',
           px: 0.5,
@@ -39,6 +71,20 @@ export default function CommonTestMode() {
           <ExpandMore />
         </Stack>
       </ButtonBase>
+      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+        <MenuItem onClick={handleTurnOn} selected={on}>
+          <ListItemText>Turn On</ListItemText>
+          <WarningAmberOutlined
+            sx={{
+              fill: ({ palette }) => palette.warning.main,
+              ml: 0.5,
+            }}
+          />
+        </MenuItem>
+        <MenuItem onClick={handleTurnOff} selected={!on}>
+          <ListItemText>Turn Off</ListItemText>
+        </MenuItem>
+      </Menu>
     </>
   );
 }
