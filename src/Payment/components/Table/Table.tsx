@@ -15,7 +15,7 @@ export default function PaymentTable() {
       <Table>
         <TableHead>
           <TableRow sx={{ whiteSpace: 'nowrap' }}>
-            <TableCell>
+            <TableCell sx={{ p: 0.5 }}>
               <Checkbox />
             </TableCell>
             <TableCell>Payment ID</TableCell>
@@ -27,7 +27,7 @@ export default function PaymentTable() {
         </TableHead>
         <TableBody>
           <TableRow>
-            <TableCell>
+            <TableCell sx={{ p: 0.5 }}>
               <Checkbox />
             </TableCell>
             <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
@@ -41,7 +41,7 @@ export default function PaymentTable() {
             <TableCell>Oct 2, 2023, 14:30:59</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>
+            <TableCell sx={{ p: 0.5 }}>
               <Checkbox />
             </TableCell>
             <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
@@ -55,7 +55,7 @@ export default function PaymentTable() {
             <TableCell>Oct 2, 2023, 14:30:59</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>
+            <TableCell sx={{ p: 0.5 }}>
               <Checkbox />
             </TableCell>
             <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
