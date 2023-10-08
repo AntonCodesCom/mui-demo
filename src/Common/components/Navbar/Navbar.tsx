@@ -1,6 +1,5 @@
 import {
   AppBar,
-  Avatar,
   Box,
   ButtonBase,
   Divider,
@@ -11,8 +10,8 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 import CommonLogo from '../Logo';
-import avatar from './avatar.jpg';
 import { ExpandMore } from '@mui/icons-material';
+import CommonAvatar from '../Avatar';
 
 interface Props {
   onSidebarOpen?: () => void;
@@ -53,7 +52,7 @@ export default function CommonNavbar({
           borderRadius="4px"
           onClick={onRightMenuOpen}
         >
-          <Avatar alt="AntonCodes" src={avatar} />
+          <CommonAvatar />
           <Box mr={0.25} />
           <ExpandMore />
         </Stack>

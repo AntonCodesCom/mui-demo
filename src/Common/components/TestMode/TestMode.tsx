@@ -15,7 +15,7 @@ import {
 import { useState } from 'react';
 
 export default function CommonTestMode() {
-  const [on, setOn] = useState(false);
+  const [on, setOn] = useState(true);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 

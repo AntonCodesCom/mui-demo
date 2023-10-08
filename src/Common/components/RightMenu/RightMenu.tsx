@@ -5,7 +5,6 @@ import {
   SettingsOutlined,
 } from '@mui/icons-material';
 import {
-  Avatar,
   Box,
   Divider,
   Drawer,
@@ -20,6 +19,7 @@ import {
   Typography,
 } from '@mui/material';
 import CommonTestMode from '../TestMode';
+import CommonAvatar from '../Avatar';
 
 interface Props {
   open?: boolean;
@@ -37,9 +37,9 @@ export default function CommonRightMenu({
           <ArrowBack />
         </IconButton>
       </Toolbar>
-      <Stack direction="row" alignItems="center" gap={1} p={1}>
-        <Avatar alt="AntonCodes" />
-        <Typography>AntonCodes</Typography>
+      <Stack direction="row" alignItems="center" gap={1.5} p={1}>
+        <CommonAvatar />
+        <Typography>Anton</Typography>
       </Stack>
       <Divider />
       <Box component={List} px={0.5}>
