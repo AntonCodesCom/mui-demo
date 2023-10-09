@@ -1,13 +1,5 @@
 import {
-  ChangeCircle,
-  CheckCircle,
-  Info,
-  RemoveCircle,
-  WatchLater,
-} from '@mui/icons-material';
-import {
   Checkbox,
-  Chip,
   Table,
   TableBody,
   TableCell,
@@ -25,6 +17,13 @@ function formatAmount(amount: number): string {
     style: 'currency',
     currency: 'USD',
   }).format(amount);
+}
+
+// utility
+function shortenUUID(uuid: string): string {
+  const firstPart = uuid.slice(0, 19);
+  const lastPart = uuid.slice(-4);
+  return `${firstPart}...${lastPart}`;
 }
 
 //
@@ -65,7 +64,7 @@ export default function PaymentTable() {
                 </TableCell>
                 <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
                 <TableCell>{x.createdAt.toLocaleString('en-US')}</TableCell>
-                <TableCell>{x.id}</TableCell>
+                <TableCell>{shortenUUID(x.id)}</TableCell>
               </TableRow>
             ))}
         </TableBody>
