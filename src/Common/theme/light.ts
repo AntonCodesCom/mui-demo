@@ -2,7 +2,7 @@ import { ThemeOptions, createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 import commonThemeOptions, { commonPalette } from './common';
 
-const { error, success, warning } = commonPalette;
+const { error, info, success, warning } = commonPalette;
 
 const lightThemeOptions: ThemeOptions = {
   palette: {
@@ -21,9 +21,17 @@ const lightThemeOptions: ThemeOptions = {
     },
     MuiChip: {
       styleOverrides: {
+        root: {
+          backgroundColor: commonPalette.action.hover,
+          color: commonPalette.text.secondary,
+        },
         colorError: {
           backgroundColor: error.light,
           color: error.dark,
+        },
+        colorInfo: {
+          backgroundColor: info.light,
+          color: info.dark,
         },
         colorSuccess: {
           backgroundColor: success.light,

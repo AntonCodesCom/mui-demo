@@ -1,4 +1,10 @@
-import { CheckCircle, RemoveCircle, WatchLater } from '@mui/icons-material';
+import {
+  AddCircle,
+  ChangeCircle,
+  CheckCircle,
+  RemoveCircle,
+  WatchLater,
+} from '@mui/icons-material';
 import {
   Checkbox,
   Chip,
@@ -72,6 +78,40 @@ export default function PaymentTable() {
                 color="warning"
                 label="Pending"
                 icon={<WatchLater />}
+              />
+            </TableCell>
+            <TableCell sx={{ whiteSpace: 'nowrap' }}>$19,623.00 USD</TableCell>
+            <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
+            <TableCell>Oct 2, 2023, 14:30:59</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell sx={{ p: 0.5 }}>
+              <Checkbox />
+            </TableCell>
+            <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
+            <TableCell>
+              <Chip
+                size="small"
+                color={undefined}
+                label="Refunded"
+                icon={<ChangeCircle />}
+              />
+            </TableCell>
+            <TableCell sx={{ whiteSpace: 'nowrap' }}>$19,623.00 USD</TableCell>
+            <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
+            <TableCell>Oct 2, 2023, 14:30:59</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell sx={{ p: 0.5 }}>
+              <Checkbox />
+            </TableCell>
+            <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
+            <TableCell>
+              <Chip
+                size="small"
+                color="info"
+                label="Created"
+                icon={<AddCircle />}
               />
             </TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>$19,623.00 USD</TableCell>

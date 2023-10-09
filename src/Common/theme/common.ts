@@ -7,6 +7,11 @@ const commonPaletteOptions: PaletteOptions = {
     main: '#d32f2f', // not overridden
     dark: '#B83131',
   },
+  info: {
+    light: '#EAECFF',
+    main: '#0288d1', // not overridden
+    dark: '#3D42AD',
+  },
   success: {
     light: '#EDFFEA',
     main: '#2e7d32', // not overridden
