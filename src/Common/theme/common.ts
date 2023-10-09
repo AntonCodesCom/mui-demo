@@ -4,13 +4,18 @@ import createPalette from '@mui/material/styles/createPalette';
 const commonPaletteOptions: PaletteOptions = {
   error: {
     light: '#FFEAEA',
-    main: '#d32f2f',
+    main: '#d32f2f', // not overridden
     dark: '#B83131',
   },
   success: {
     light: '#EDFFEA',
-    main: '#2e7d32',
+    main: '#2e7d32', // not overridden
     dark: '#165E3D',
+  },
+  warning: {
+    light: '#FFF6E9',
+    main: '#ed6c02', // not overridden
+    dark: '#B5850B',
   },
 };
 

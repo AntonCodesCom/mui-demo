@@ -2,7 +2,7 @@ import { ThemeOptions, createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 import commonThemeOptions, { commonPalette } from './common';
 
-const { error, success } = commonPalette;
+const { error, success, warning } = commonPalette;
 
 const darkThemeOptions: ThemeOptions = {
   palette: {
@@ -26,6 +26,9 @@ const darkThemeOptions: ThemeOptions = {
         },
         colorSuccess: {
           backgroundColor: success.dark,
+        },
+        colorWarning: {
+          backgroundColor: warning.dark,
         },
       },
     },
