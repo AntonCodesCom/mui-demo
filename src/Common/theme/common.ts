@@ -2,6 +2,11 @@ import { PaletteOptions, ThemeOptions } from '@mui/material';
 import createPalette from '@mui/material/styles/createPalette';
 
 const commonPaletteOptions: PaletteOptions = {
+  error: {
+    light: '#FFEAEA',
+    main: '#d32f2f',
+    dark: '#B83131',
+  },
   success: {
     light: '#EDFFEA',
     main: '#2e7d32',

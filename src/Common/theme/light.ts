@@ -2,6 +2,8 @@ import { ThemeOptions, createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 import commonThemeOptions, { commonPalette } from './common';
 
+const { error, success } = commonPalette;
+
 const lightThemeOptions: ThemeOptions = {
   palette: {
     mode: 'light',
@@ -19,9 +21,13 @@ const lightThemeOptions: ThemeOptions = {
     },
     MuiChip: {
       styleOverrides: {
+        colorError: {
+          backgroundColor: error.light,
+          color: error.dark,
+        },
         colorSuccess: {
-          backgroundColor: commonPalette.success.light,
-          color: commonPalette.success.dark,
+          backgroundColor: success.light,
+          color: success.dark,
         },
       },
     },
