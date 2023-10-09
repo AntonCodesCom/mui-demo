@@ -34,14 +34,12 @@ export default function CommonSidebar({
 }: Props) {
   return (
     <Drawer anchor="left" open={open} onClose={onClose}>
-      <Toolbar disableGutters>
-        <Box mr={1.5} />
+      <Toolbar>
         <CommonLogo />
         <Box flex="1" />
         <IconButton size="large" color="inherit" onClick={onClose}>
           <MenuOpen />
         </IconButton>
-        <Box mr={0.5} />
       </Toolbar>
       <Box px={1}>
         <List>
@@ -94,7 +92,13 @@ export default function CommonSidebar({
             </ListItemButton>
           </ListItem>
         </List>
-        <List subheader={<ListSubheader>Support</ListSubheader>}>
+        <List
+          subheader={
+            <ListSubheader sx={{ backgroundColor: 'transparent' }}>
+              Support
+            </ListSubheader>
+          }
+        >
           <ListItem>
             <ListItemButton>
               <ListItemIcon>

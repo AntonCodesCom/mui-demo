@@ -1,7 +1,7 @@
 import {
-  AddCircle,
   ChangeCircle,
   CheckCircle,
+  Info,
   RemoveCircle,
   WatchLater,
 } from '@mui/icons-material';
@@ -107,12 +107,7 @@ export default function PaymentTable() {
             </TableCell>
             <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
             <TableCell>
-              <Chip
-                size="small"
-                color="info"
-                label="Created"
-                icon={<AddCircle />}
-              />
+              <Chip size="small" color="info" label="Created" icon={<Info />} />
             </TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>$19,623.00 USD</TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>

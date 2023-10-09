@@ -26,7 +26,9 @@ export default function PaymentFilters() {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <SearchOutlined />
+                <SearchOutlined
+                  sx={{ fill: ({ palette }) => palette.text.disabled }}
+                />
               </InputAdornment>
             ),
           }}
