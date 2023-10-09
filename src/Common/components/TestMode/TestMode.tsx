@@ -4,19 +4,21 @@ import {
   WarningAmberOutlined,
 } from '@mui/icons-material';
 import { ButtonBase, Chip, ListItemText, Menu, MenuItem } from '@mui/material';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import styles from './TestMode.module.css';
 
 export default function CommonTestMode() {
   const [on, setOn] = useState(true);
+  const ref = useRef<HTMLButtonElement>(null);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
+  function handleClick() {
+    setAnchorEl(ref.current);
+  }
+  function handleClose() {
     setAnchorEl(null);
-  };
+  }
 
   function handleTurnOn() {
     setOn(true);
@@ -29,7 +31,7 @@ export default function CommonTestMode() {
 
   return (
     <>
-      <ButtonBase onClick={handleClick}>
+      <ButtonBase ref={ref} onClick={handleClick}>
         <Chip
           icon={
             <BugReport
@@ -58,6 +60,9 @@ export default function CommonTestMode() {
             />
           }
           onDelete={handleClick}
+          classes={{
+            label: styles.label,
+          }}
         />
       </ButtonBase>
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
