@@ -66,6 +66,14 @@ const commonThemeOptions: ThemeOptions = {
         },
       },
     },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          textTransform: 'uppercase',
+          whiteSpace: 'nowrap',
+        },
+      },
+    },
     MuiToolbar: {
       styleOverrides: {
         gutters: {

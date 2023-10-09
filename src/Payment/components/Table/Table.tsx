@@ -21,10 +21,8 @@ export default function PaymentTable() {
     <TableContainer>
       <Table>
         <TableHead>
-          <TableRow sx={{ whiteSpace: 'nowrap' }}>
-            <TableCell sx={{ p: 0.5 }}>
-              <Checkbox />
-            </TableCell>
+          <TableRow>
+            <TableCell></TableCell>
             <TableCell>Payment ID</TableCell>
             <TableCell>Status</TableCell>
             <TableCell>Amount</TableCell>
