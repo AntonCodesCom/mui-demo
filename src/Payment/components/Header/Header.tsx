@@ -35,7 +35,7 @@ export default function PaymentHeader() {
           startIcon={<CloudUploadOutlined />}
           sx={{
             borderColor: mode === 'dark' ? '#1c1c1c' : '#F0F2F4',
-            backgroundColor: mode === 'dark' ? '#1c1c1c' : '#white',
+            backgroundColor: mode === 'dark' ? '#1c1c1c' : 'white',
           }}
         >
           Export

@@ -1,6 +1,6 @@
 import { ThemeOptions, createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
-import commonThemeOptions from './common';
+import commonThemeOptions, { commonPalette } from './common';
 
 const lightThemeOptions: ThemeOptions = {
   palette: {
@@ -14,6 +14,14 @@ const lightThemeOptions: ThemeOptions = {
       styleOverrides: {
         colorDefault: {
           backgroundColor: 'white',
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        colorSuccess: {
+          backgroundColor: commonPalette.success.light,
+          color: commonPalette.success.dark,
         },
       },
     },
