@@ -14,8 +14,22 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from '@mui/material';
+import paymentItems from 'Payment/data/items';
+import PaymentStatusChip from '../StatusChip';
 
+// utility
+function formatAmount(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(amount);
+}
+
+//
+// component
+//
 export default function PaymentTable() {
   return (
     <TableContainer>
@@ -31,6 +45,28 @@ export default function PaymentTable() {
           </TableRow>
         </TableHead>
         <TableBody>
+          {paymentItems.map((x, i) => (
+            <TableRow key={i}>
+              <TableCell sx={{ p: 0.5 }}>
+                <Checkbox />
+              </TableCell>
+              <TableCell>{x.id}</TableCell>
+              <TableCell>
+                <PaymentStatusChip status={x.status} />
+              </TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>
+                <Typography variant="body2" display="inline" fontWeight={700}>
+                  {formatAmount(x.amount)}
+                </Typography>
+                &nbsp;
+                <Typography variant="body2" display="inline" fontWeight={300}>
+                  USD
+                </Typography>
+              </TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
+              <TableCell>{x.createdAt.toDateString()}</TableCell>
+            </TableRow>
+          ))}
           <TableRow>
             <TableCell sx={{ p: 0.5 }}>
               <Checkbox />
