@@ -72,7 +72,7 @@ export default function CommonRightMenu({
         </ListItem>
       </Box>
       <Divider />
-      <Box py={0.5} px={0.5}>
+      <Box py={1} px={0.5}>
         <CommonTestMode />
       </Box>
     </Drawer>

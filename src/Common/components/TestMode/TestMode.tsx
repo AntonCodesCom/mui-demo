@@ -6,6 +6,7 @@ import {
 import {
   Box,
   ButtonBase,
+  Chip,
   ListItemText,
   Menu,
   MenuItem,
@@ -54,7 +55,6 @@ export default function CommonTestMode() {
             width: '100%',
             height: '100%',
             backgroundColor: on ? 'warning.light' : 'action.hover',
-            opacity: on ? 0.2 : 1,
             borderRadius: '4px',
           }}
         />
@@ -71,6 +71,24 @@ export default function CommonTestMode() {
           <ExpandMore />
         </Stack>
       </ButtonBase>
+      <br />
+      <br />
+      <Chip
+        component="button"
+        icon={
+          <BugReport
+            sx={{
+              fill: ({ palette }) =>
+                on ? palette.warning.main : palette.text.disabled,
+            }}
+          />
+        }
+        color={on ? 'warning' : undefined}
+        label="Test mode: Off"
+        deleteIcon={<ExpandMore />}
+        onClick={handleClick}
+        onDelete={handleClick}
+      />
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem onClick={handleTurnOn} selected={on}>
           <ListItemText>Turn On</ListItemText>
