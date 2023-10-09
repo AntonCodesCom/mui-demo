@@ -3,16 +3,7 @@ import {
   ExpandMore,
   WarningAmberOutlined,
 } from '@mui/icons-material';
-import {
-  Box,
-  ButtonBase,
-  Chip,
-  ListItemText,
-  Menu,
-  MenuItem,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { ButtonBase, Chip, ListItemText, Menu, MenuItem } from '@mui/material';
 import { useState } from 'react';
 
 export default function CommonTestMode() {
@@ -38,57 +29,37 @@ export default function CommonTestMode() {
 
   return (
     <>
-      <ButtonBase
-        onClick={handleClick}
-        sx={{
-          position: 'relative',
-          px: 0.5,
-          py: 0.25,
-          borderRadius: '4px',
-        }}
-      >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: on ? 'warning.light' : 'action.hover',
-            borderRadius: '4px',
-          }}
+      <ButtonBase onClick={handleClick}>
+        <Chip
+          icon={
+            <BugReport
+              sx={{
+                fill: ({ palette }) =>
+                  on
+                    ? palette.mode === 'dark'
+                      ? palette.warning.contrastText
+                      : palette.warning.main
+                    : palette.text.disabled,
+              }}
+            />
+          }
+          color={on ? 'warning' : undefined}
+          label={on ? 'Test mode: On' : 'Test mode: Off'}
+          deleteIcon={
+            <ExpandMore
+              sx={{
+                fill: ({ palette }) =>
+                  palette.mode === 'dark'
+                    ? palette.warning.contrastText
+                    : on
+                    ? palette.warning.dark
+                    : palette.text.disabled,
+              }}
+            />
+          }
+          onDelete={handleClick}
         />
-        <Stack direction="row" position="relative">
-          <BugReport
-            sx={{
-              fill: ({ palette }) =>
-                on ? palette.warning.main : palette.text.disabled,
-            }}
-          />
-          <Typography ml={0.5} mr={on ? 0.4 : 0.25}>
-            {on ? 'Test mode: On' : 'Test mode: Off'}
-          </Typography>
-          <ExpandMore />
-        </Stack>
       </ButtonBase>
-      <br />
-      <br />
-      <Chip
-        component="button"
-        icon={
-          <BugReport
-            sx={{
-              fill: ({ palette }) =>
-                on ? palette.warning.main : palette.text.disabled,
-            }}
-          />
-        }
-        color={on ? 'warning' : undefined}
-        label="Test mode: Off"
-        deleteIcon={<ExpandMore />}
-        onClick={handleClick}
-        onDelete={handleClick}
-      />
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem onClick={handleTurnOn} selected={on}>
           <ListItemText>Turn On</ListItemText>
