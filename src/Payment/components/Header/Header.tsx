@@ -1,7 +1,18 @@
 import { Add, CloudUploadOutlined } from '@mui/icons-material';
-import { Box, Button, Fab, IconButton, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Fab,
+  IconButton,
+  Stack,
+  Typography,
+  useTheme,
+} from '@mui/material';
 
 export default function PaymentHeader() {
+  const {
+    palette: { mode },
+  } = useTheme();
   return (
     <Stack direction="row" alignItems="center">
       <Typography variant="h5" component="h1">
@@ -23,8 +34,8 @@ export default function PaymentHeader() {
           color="inherit"
           startIcon={<CloudUploadOutlined />}
           sx={{
-            borderColor: '#F0F2F4',
-            backgroundColor: 'white',
+            borderColor: mode === 'dark' ? '#1c1c1c' : '#F0F2F4',
+            backgroundColor: mode === 'dark' ? '#1c1c1c' : '#white',
           }}
         >
           Export

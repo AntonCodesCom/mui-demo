@@ -1,12 +1,13 @@
+import { CheckCircle, RemoveCircle, WatchLater } from '@mui/icons-material';
 import {
   Checkbox,
+  Chip,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from '@mui/material';
 
 export default function PaymentTable() {
@@ -32,9 +33,12 @@ export default function PaymentTable() {
             </TableCell>
             <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
             <TableCell>
-              <Typography variant="body2" sx={{ color: 'success.main' }}>
-                Succeeded
-              </Typography>
+              <Chip
+                size="small"
+                color="error"
+                label="Declined"
+                icon={<RemoveCircle />}
+              />
             </TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>$19,623.00 USD</TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
@@ -46,9 +50,12 @@ export default function PaymentTable() {
             </TableCell>
             <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
             <TableCell>
-              <Typography variant="body2" sx={{ color: 'success.main' }}>
-                Succeeded
-              </Typography>
+              <Chip
+                size="small"
+                color="success"
+                label="Succeeded"
+                icon={<CheckCircle />}
+              />
             </TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>$19,623.00 USD</TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
@@ -60,9 +67,12 @@ export default function PaymentTable() {
             </TableCell>
             <TableCell>06c1774-7f3d-46ad...90a8</TableCell>
             <TableCell>
-              <Typography variant="body2" sx={{ color: 'success.main' }}>
-                Succeeded
-              </Typography>
+              <Chip
+                size="small"
+                color="warning"
+                label="Pending"
+                icon={<WatchLater />}
+              />
             </TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>$19,623.00 USD</TableCell>
             <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>

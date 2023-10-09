@@ -13,6 +13,16 @@ const commonThemeOptions: ThemeOptions = {
         },
       },
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          borderRadius: '4px',
+        },
+        icon: {
+          paddingLeft: '0.1rem',
+        },
+      },
+    },
     MuiListItem: {
       defaultProps: {
         disablePadding: true,
