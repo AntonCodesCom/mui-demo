@@ -62,7 +62,7 @@ export default function PaymentTable() {
                 <TableCell>
                   <PaymentStatusChip status={x.status} />
                 </TableCell>
-                <TableCell sx={{ whiteSpace: 'nowrap' }}>•••• 4242</TableCell>
+                <TableCell sx={{ whiteSpace: 'nowrap' }}>{x.method}</TableCell>
                 <TableCell>{x.createdAt.toLocaleString('en-US')}</TableCell>
                 <TableCell>{shortenUUID(x.id)}</TableCell>
               </TableRow>

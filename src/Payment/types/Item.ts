@@ -5,4 +5,5 @@ export default interface PaymentItem {
   status: PaymentStatus;
   amount: number;
   createdAt: Date;
+  method: string;
 }
