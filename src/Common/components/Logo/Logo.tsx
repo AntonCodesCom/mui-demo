@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, useTheme } from '@mui/material';
+import { Box, ButtonBase, Stack, Typography, useTheme } from '@mui/material';
 import { ReactComponent as Logo } from './logo.svg';
 
 export default function CommonLogo() {
@@ -8,7 +8,7 @@ export default function CommonLogo() {
     },
   } = useTheme();
   return (
-    <Stack direction="row">
+    <Stack component={ButtonBase} direction="row" p={0.5}>
       <Logo fill={primaryMainColor} />
       <Box mr={0.5} />
       <Typography variant="h6" component="div">
