@@ -27,12 +27,14 @@ interface Props {
   themeMode: CommonThemeMode;
   open?: boolean;
   onClose?: () => void;
+  onThemeModeChange?: () => void;
 }
 
 export default function CommonRightMenu({
   themeMode,
   open = false,
   onClose = () => {},
+  onThemeModeChange = () => {},
 }: Props) {
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
@@ -67,7 +69,7 @@ export default function CommonRightMenu({
       <Divider />
       <Box component={List} px={0.5}>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton onClick={onThemeModeChange}>
             <ListItemIcon>
               {themeMode === CommonThemeMode.DARK ? (
                 <LightModeOutlined />

@@ -49,6 +49,7 @@ export default function App() {
         themeMode={themeMode}
         open={rightMenuOpen}
         onClose={() => setRightMenuOpen(false)}
+        onThemeModeChange={handleThemeModeChange}
       />
     </ThemeProvider>
   );
