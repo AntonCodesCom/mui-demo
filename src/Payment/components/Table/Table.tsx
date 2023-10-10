@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import paymentItems from 'Payment/data/items';
 import PaymentStatusChip from '../StatusChip';
+import { CheckBoxOutlined, CheckBoxOutlineBlank } from '@mui/icons-material';
 
 // utility
 function formatAmount(amount: number): string {
@@ -49,7 +50,16 @@ export default function PaymentTable() {
             .map((x, i) => (
               <TableRow key={i}>
                 <TableCell sx={{ p: 0.5 }}>
-                  <Checkbox />
+                  <Checkbox
+                    icon={
+                      <CheckBoxOutlineBlank
+                        sx={{
+                          fill: (theme) => theme.palette.text.disabled,
+                        }}
+                      />
+                    }
+                    checkedIcon={<CheckBoxOutlined />}
+                  />
                 </TableCell>
                 <TableCell sx={{ whiteSpace: 'nowrap' }}>
                   <Typography variant="body2" display="inline" fontWeight={700}>
