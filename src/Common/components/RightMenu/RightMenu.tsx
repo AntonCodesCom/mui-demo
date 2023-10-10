@@ -20,7 +20,7 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
-import CommonTestMode from '../TestMode';
+import CommonTestModeButton from '../TestModeButton';
 import CommonThemeMode from 'Common/types/ThemeMode';
 import avatar from 'Common/data/avatar.jpg';
 
@@ -88,7 +88,7 @@ export default function CommonRightMenu({
       </Box>
       <Divider />
       <Box py={1} px={0.5} textAlign="center">
-        <CommonTestMode />
+        <CommonTestModeButton />
       </Box>
     </Drawer>
   );

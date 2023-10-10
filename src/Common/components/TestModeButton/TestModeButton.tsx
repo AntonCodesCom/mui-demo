@@ -5,9 +5,9 @@ import {
 } from '@mui/icons-material';
 import { ButtonBase, Chip, ListItemText, Menu, MenuItem } from '@mui/material';
 import { useRef, useState } from 'react';
-import styles from './TestMode.module.css';
+import styles from './TestModeButton.module.css';
 
-export default function CommonTestMode() {
+export default function CommonTestModeButton() {
   const [on, setOn] = useState(true);
   const ref = useRef<HTMLButtonElement>(null);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
