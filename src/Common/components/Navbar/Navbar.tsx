@@ -10,16 +10,19 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 import CommonLogo from '../Logo';
-import { ExpandMore } from '@mui/icons-material';
+import { ExpandMore, LightModeOutlined } from '@mui/icons-material';
 import CommonAvatar from '../Avatar';
+import CommonThemeMode from 'Common/types/ThemeMode';
 
 interface Props {
+  themeMode: CommonThemeMode;
   onSidebarOpen?: () => void;
   onRightMenuOpen?: () => void;
   onThemeModeChange?: () => void;
 }
 
 export default function CommonNavbar({
+  themeMode,
   onSidebarOpen = () => {},
   onRightMenuOpen = () => {},
   onThemeModeChange = () => {},
@@ -33,14 +36,21 @@ export default function CommonNavbar({
         <Box flex={1} />
         <CommonLogo />
         <Box flex={1} />
-        <IconButton size="large" color="inherit" onClick={onThemeModeChange}>
-          <DarkModeIcon />
-        </IconButton>
+        <Box display={{ xs: 'none', sm: 'block' }}>
+          <IconButton size="large" color="inherit" onClick={onThemeModeChange}>
+            {themeMode === CommonThemeMode.DARK ? (
+              <LightModeOutlined />
+            ) : (
+              <DarkModeIcon />
+            )}
+          </IconButton>
+        </Box>
         <Box
           component={Divider}
           orientation="vertical"
           variant="middle"
           flexItem
+          display={{ xs: 'none', sm: 'block' }}
           mx={0.5}
         />
         <Stack

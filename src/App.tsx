@@ -27,6 +27,7 @@ export default function App() {
       <CssBaseline />
       <Stack minHeight="100vh">
         <CommonNavbar
+          themeMode={themeMode}
           onSidebarOpen={() => setSidebarOpen(true)}
           onRightMenuOpen={() => setRightMenuOpen(true)}
           onThemeModeChange={handleThemeModeChange}
