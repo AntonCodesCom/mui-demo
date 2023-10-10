@@ -1,6 +1,7 @@
 import {
   ArrowBack,
   DarkModeOutlined,
+  LightModeOutlined,
   NotificationsOutlined,
   SettingsOutlined,
 } from '@mui/icons-material';
@@ -20,13 +21,16 @@ import {
 } from '@mui/material';
 import CommonTestMode from '../TestMode';
 import CommonAvatar from '../Avatar';
+import CommonThemeMode from 'Common/types/ThemeMode';
 
 interface Props {
+  themeMode: CommonThemeMode;
   open?: boolean;
   onClose?: () => void;
 }
 
 export default function CommonRightMenu({
+  themeMode,
   open = false,
   onClose = () => {},
 }: Props) {
@@ -65,9 +69,17 @@ export default function CommonRightMenu({
         <ListItem>
           <ListItemButton>
             <ListItemIcon>
-              <DarkModeOutlined />
+              {themeMode === CommonThemeMode.DARK ? (
+                <LightModeOutlined />
+              ) : (
+                <DarkModeOutlined />
+              )}
             </ListItemIcon>
-            <ListItemText primary="Dark mode" />
+            <ListItemText
+              primary={
+                themeMode === CommonThemeMode.DARK ? 'Light mode' : 'Dark mode'
+              }
+            />
           </ListItemButton>
         </ListItem>
       </Box>

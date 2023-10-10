@@ -5,12 +5,8 @@ import CommonRightMenu from 'Common/components/RightMenu';
 import CommonSidebar from 'Common/components/Sidebar';
 import darkTheme from 'Common/theme/dark';
 import lightTheme from 'Common/theme/light';
+import ThemeMode from 'Common/types/ThemeMode';
 import { useState } from 'react';
-
-enum ThemeMode {
-  DARK,
-  LIGHT,
-}
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -50,6 +46,7 @@ export default function App() {
       </Stack>
       <CommonSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <CommonRightMenu
+        themeMode={themeMode}
         open={rightMenuOpen}
         onClose={() => setRightMenuOpen(false)}
       />
