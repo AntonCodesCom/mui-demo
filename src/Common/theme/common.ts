@@ -19,8 +19,9 @@ const commonPaletteOptions: PaletteOptions = {
   },
   warning: {
     light: '#FFF6E9',
-    main: '#ed6c02', // not overridden
+    main: '#d6ac1a',
     dark: '#B5850B',
+    contrastText: '#ffffff',
   },
 };
 

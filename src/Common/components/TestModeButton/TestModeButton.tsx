@@ -3,7 +3,14 @@ import {
   ExpandMore,
   WarningAmberOutlined,
 } from '@mui/icons-material';
-import { ButtonBase, Chip, ListItemText, Menu, MenuItem } from '@mui/material';
+import {
+  Box,
+  ButtonBase,
+  Chip,
+  ListItemText,
+  Menu,
+  MenuItem,
+} from '@mui/material';
 import { useRef, useState } from 'react';
 import styles from './TestModeButton.module.css';
 import CommonTestMode from 'Common/types/TestMode';
@@ -77,12 +84,14 @@ export default function CommonTestModeButton({
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem onClick={handleTurnOn} selected={on}>
           <ListItemText>Turn On</ListItemText>
-          <WarningAmberOutlined
-            sx={{
-              fill: ({ palette }) => palette.warning.main,
-              ml: 0.5,
-            }}
-          />
+          <Box width="1.75rem" pl={0.5}>
+            <WarningAmberOutlined
+              sx={{
+                fill: ({ palette }) => palette.warning.main,
+                pt: 0.25,
+              }}
+            />
+          </Box>
         </MenuItem>
         <MenuItem onClick={handleTurnOff} selected={!on}>
           <ListItemText>Turn Off</ListItemText>
