@@ -2,6 +2,10 @@
 
 Welcome to my demonstrational React & Material UI application where I show the basic usage of the [MUI (Material UI) library](https://mui.com/material-ui/) as well as common responsive UI development principles!
 
+Live version of this demo application can be accessed here:
+
+https://mui-demo-one.vercel.app/
+
 ## Features
 
 The application contains the following:
