@@ -5,6 +5,7 @@ import CommonRightMenu from 'Common/components/RightMenu';
 import CommonSidebar from 'Common/components/Sidebar';
 import darkTheme from 'Common/theme/dark';
 import lightTheme from 'Common/theme/light';
+import CommonTestMode from 'Common/types/TestMode';
 import ThemeMode from 'Common/types/ThemeMode';
 import { useState } from 'react';
 
@@ -12,6 +13,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [rightMenuOpen, setRightMenuOpen] = useState(false);
   const [themeMode, setThemeMode] = useState<ThemeMode>(ThemeMode.LIGHT);
+  const [testMode, setTestMode] = useState<CommonTestMode>(CommonTestMode.ON);
   const mainBgColor = themeMode === ThemeMode.LIGHT ? '#fbfbfb' : '#121212';
 
   function handleThemeModeChange() {
@@ -48,9 +50,11 @@ export default function App() {
       <CommonSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <CommonRightMenu
         themeMode={themeMode}
+        testMode={testMode}
         open={rightMenuOpen}
         onClose={() => setRightMenuOpen(false)}
         onThemeModeChange={handleThemeModeChange}
+        onTestModeChange={setTestMode}
       />
     </ThemeProvider>
   );

@@ -23,19 +23,24 @@ import {
 import CommonTestModeButton from '../TestModeButton';
 import CommonThemeMode from 'Common/types/ThemeMode';
 import avatar from 'Common/data/avatar.jpg';
+import CommonTestMode from 'Common/types/TestMode';
 
 interface Props {
   themeMode: CommonThemeMode;
+  testMode: CommonTestMode;
   open?: boolean;
   onClose?: () => void;
   onThemeModeChange?: () => void;
+  onTestModeChange?: (testMode: CommonTestMode) => void;
 }
 
 export default function CommonRightMenu({
   themeMode,
+  testMode,
   open = false,
   onClose = () => {},
   onThemeModeChange = () => {},
+  onTestModeChange = () => {},
 }: Props) {
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
@@ -88,7 +93,10 @@ export default function CommonRightMenu({
       </Box>
       <Divider />
       <Box py={1} px={0.5} textAlign="center">
-        <CommonTestModeButton />
+        <CommonTestModeButton
+          testMode={testMode}
+          onTestModeChange={onTestModeChange}
+        />
       </Box>
     </Drawer>
   );

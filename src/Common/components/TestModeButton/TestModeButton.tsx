@@ -6,12 +6,21 @@ import {
 import { ButtonBase, Chip, ListItemText, Menu, MenuItem } from '@mui/material';
 import { useRef, useState } from 'react';
 import styles from './TestModeButton.module.css';
+import CommonTestMode from 'Common/types/TestMode';
 
-export default function CommonTestModeButton() {
-  const [on, setOn] = useState(true);
+interface Props {
+  testMode: CommonTestMode;
+  onTestModeChange?: (testMode: CommonTestMode) => void;
+}
+
+export default function CommonTestModeButton({
+  testMode,
+  onTestModeChange = () => {},
+}: Props) {
   const ref = useRef<HTMLButtonElement>(null);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const on = testMode === CommonTestMode.ON;
 
   function handleClick() {
     setAnchorEl(ref.current);
@@ -21,11 +30,11 @@ export default function CommonTestModeButton() {
   }
 
   function handleTurnOn() {
-    setOn(true);
+    onTestModeChange(CommonTestMode.ON);
     setAnchorEl(null);
   }
   function handleTurnOff() {
-    setOn(false);
+    onTestModeChange(CommonTestMode.OFF);
     setAnchorEl(null);
   }
 
