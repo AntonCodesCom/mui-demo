@@ -50,8 +50,8 @@ export default function CommonRightMenu({
         </IconButton>
       </Toolbar>
       <Stack direction="row" alignItems="center" gap={1.5} p={1}>
-        <Avatar alt="Anton" src={avatar} />
-        <Typography>Anton</Typography>
+        <Avatar alt="Anton Bakhurynskyi" src={avatar} />
+        <Typography>Anton B.</Typography>
       </Stack>
       <Divider />
       <Box component={List} px={0.5}>

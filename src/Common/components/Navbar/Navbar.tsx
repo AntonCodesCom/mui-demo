@@ -64,7 +64,7 @@ export default function CommonNavbar({
           onClick={onRightMenuOpen}
         >
           <Avatar
-            alt="Anton"
+            alt="Anton Bakhurynskyi"
             src={avatar}
             sx={{
               width: { xs: '2rem', sm: '2.5rem' },
